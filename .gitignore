@@ -1,0 +1,10 @@
+
+# folders
+node_modules/
+.idea/
+dist/
+build/
+
+# files
+*.iml
+*.lock
