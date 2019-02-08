@@ -1,6 +1,21 @@
 {
-  "name": "react-fullstack-template",
-  "version": "1.0.0",
-  "private": true,
-  "author": ".Seikatsu"
+	"name": "react-fullstack-template",
+	"version": "1.0.0",
+	"private": true,
+	"author": ".Seikatsu",
+	"scripts": {
+		"clean": "rm -rf dist",
+		"dev-client": "cd client && yarn dev",
+		"dev-server": "cd server && yarn server",
+		"build-client": "cd client && yarn build",
+		"build-server": "cd server && yarn build",
+		"start-client": "cd client && yarn start",
+		"start-server": "cd server && yarn start",
+		"dev": "concurrently --names \"client,server\" -c \"green,blue\" \"yarn dev-client\" \"yarn dev-server\"",
+		"start": "concurrently --names \"client,server\" -c \"green,blue\" \"yarn start-client\" \"yarn start-server\"",
+		"build": "yarn clean && yarn build-client && yarn build-server"
+	},
+	"dependencies": {
+		"datasource": "file:./datasource"
+	}
 }
