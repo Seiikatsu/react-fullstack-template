@@ -6,7 +6,7 @@
 	"scripts": {
 		"clean": "rm -rf dist",
 		"dev-client": "cd client && yarn dev",
-		"dev-server": "cd server && yarn server",
+		"dev-server": "cd server && yarn dev",
 		"build-client": "cd client && yarn build",
 		"build-server": "cd server && yarn build",
 		"start-client": "cd client && yarn start",
