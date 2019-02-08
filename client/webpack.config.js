@@ -2,11 +2,14 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, argv) => {
+    const isProduction = argv.mode === 'production';
+
     const CURRENT_PATH = __dirname;
-    const DIST_PATH = path.join(CURRENT_PATH, 'dist');
+    const DIST_PATH = isProduction ? path.join(CURRENT_PATH, '..', 'dist', 'static') : path.join(CURRENT_PATH, 'dist');
 
     return {
         target: 'web', // default anyway, but we make it clear
+        mode: argv.mode,
         entry: './src/App.jsx',
         module: {
             rules: [
