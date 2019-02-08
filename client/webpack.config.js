@@ -41,6 +41,10 @@ module.exports = (env, argv) => {
         ],
         node: { // dont exactly know why this is necessary, but seems related to a bug in css-loader
             fs: 'empty'
+        },
+        devServer: {
+            compress: isProduction,
+            port: 3000
         }
     }
 };
