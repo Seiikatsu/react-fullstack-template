@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors';
+import logger from 'morgan';
 
 const app = express();
 app.use(cors());
+app.use(logger('dev')); // log all requests
 
 /*
 * In development, we dont care about the GET route "/", we only provide routes that we need for our api to the client.
