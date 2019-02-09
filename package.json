@@ -3,6 +3,11 @@
 	"version": "1.0.0",
 	"private": true,
 	"author": ".Seikatsu",
+	"workspaces": [
+		"client",
+		"datasource",
+		"server"
+	],
 	"scripts": {
 		"clean": "rm -rf dist",
 		"dev-client": "cd client && yarn dev",
@@ -14,8 +19,5 @@
 		"dev": "concurrently --names \"client,server\" -c \"green,blue\" \"yarn dev-client\" \"yarn dev-server\"",
 		"start": "concurrently --names \"client,server\" -c \"green,blue\" \"yarn start-client\" \"yarn start-server\"",
 		"build": "yarn clean && yarn build-client && yarn build-server"
-	},
-	"dependencies": {
-		"datasource": "file:./datasource"
 	}
 }
