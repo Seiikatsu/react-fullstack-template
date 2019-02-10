@@ -1,4 +1,4 @@
-# Client
+# Server
 
 This module provide a simple [Express](https://expressjs.com/) template.
 
