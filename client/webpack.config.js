@@ -54,6 +54,9 @@ module.exports = (env, argv) => {
         devServer: {
             compress: isProduction,
             port: 3000
+        },
+        resolve: {
+            extensions: [".webpack.js", ".web.js", ".js", ".json", ".jsx"]
         }
     }
 };
