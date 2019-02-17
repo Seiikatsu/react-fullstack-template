@@ -50,3 +50,7 @@ This module already got dependencies pre-installed
 
 The module supports following "new" syntax:
 * ES 6
+
+### ESLint
+
+[airbnb-config-base](https://www.npmjs.com/package/eslint-config-airbnb-base) is used for linting this module.

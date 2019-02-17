@@ -7,20 +7,21 @@ app.use(cors());
 app.use(logger('dev')); // log all requests
 
 /*
-* In development, we dont care about the GET route "/", we only provide routes that we need for our api to the client.
+* In development, we dont care about the GET route "/", we only provide routes that we need for
+* our api to the client.
 */
 app.get('/', (req, res) => {
-    res.send('You wont find anything here in development mode!');
+  res.send('You wont find anything here in development mode!');
 });
 
 /*
 * Dummy POST route that could be removed later and is only used for testing.
 */
 app.post('/ping', (req, res) => {
-    console.log('PING');
-    res.send({
-        message: 'pong'
-    })
+  console.log('PING');
+  res.send({
+    message: 'pong',
+  });
 });
 
 export default app;
