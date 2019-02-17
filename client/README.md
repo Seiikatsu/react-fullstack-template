@@ -32,3 +32,7 @@ The module supports following "new" syntax:
 * ES 6
 * Class properties
 * React JSX
+
+### ESLint
+
+For this module, ESLint is enabled. By default it extends from the [airbnb-config](https://www.npmjs.com/package/eslint-config-airbnb-base).
