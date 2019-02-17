@@ -22,5 +22,3 @@ server.listen(PORT, () => {
     console.log(`App listening to ${PORT}....`);
     console.log('Press Ctrl+C to quit.')
 });
-
-

@@ -4,7 +4,16 @@ This module provide a simple [Express](https://expressjs.com/) template.
 
 ## Getting Started
 
+### Database dialects
 
+To use the server module, you will need to configure a dialect. By default the dialect is configured to MySQL/MariaDB.  
+You can choose between 4 dialects that are supported by sequelize.  
+* [MySQL / MariaDB](https://www.npmjs.com/package/mysql2)
+* [PostgreSQL](https://www.npmjs.com/package/pg)
+* [SQLite](https://www.npmjs.com/package/sqlite3)
+* [MsSQL](https://www.npmjs.com/package/tedious)
+
+You will need to install the dependency and should remove the module from the [webpack config](webpack.config.js) externals key.
 
 ## Further explanation
 

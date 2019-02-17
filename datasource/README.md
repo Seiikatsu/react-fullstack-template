@@ -1,6 +1,7 @@
 # Datasource
 
-This module provide a seperated datasource by the use of [Sequelize](https://www.npmjs.com/package/sequelize).
+This module provide a seperated datasource by the use of [Sequelize](https://www.npmjs.com/package/sequelize).  
+All modules that want to use this module, need to declare there dialects. (mysql2, pg, sqlite3, tedious, pg-hstore).
 
 ## Further explanation
 
@@ -9,5 +10,3 @@ This module provide a seperated datasource by the use of [Sequelize](https://www
 This module already got dependencies pre-installed
 * [sequelize](https://www.npmjs.com/package/sequelize)
     * ORM used for migrations, seeds and datasource connection
-* [mysql2](https://www.npmjs.com/package/mysql2)
-    * MySQL / MariaDB driver
