@@ -4,20 +4,35 @@
 	"private": true,
 	"author": ".Seikatsu",
 	"workspaces": [
-		"client",
-		"datasource",
-		"server"
+		"modules/*"
 	],
 	"scripts": {
+		"dev-client": "cd modules/client && yarn dev",
+		"dev-server": "cd modules/server && yarn dev",
+		"build-client": "cd modules/client && yarn build",
+		"build-server": "cd modules/server && yarn build",
+		"start-client": "cd modules/client && yarn start",
+		"start-server": "cd modules/server && yarn start",
+		"lint-client": "cd modules/client && yarn lint",
+		"lint-server": "cd modules/server && yarn lint",
+		"test-client": "cd modules/client && yarn test",
+		"test-server": "cd modules/server && yarn test",
 		"clean": "rm -rf dist",
-		"dev-client": "cd client && yarn dev",
-		"dev-server": "cd server && yarn dev",
-		"build-client": "cd client && yarn build",
-		"build-server": "cd server && yarn build",
-		"start-client": "cd client && yarn start",
-		"start-server": "cd server && yarn start",
+		"lint": "yarn lint-client && yarn lint-server",
+		"test": "yarn test-client && yarn test-server",
 		"dev": "concurrently --names \"client,server\" -c \"green,blue\" \"yarn dev-client\" \"yarn dev-server\"",
 		"start": "concurrently --names \"client,server\" -c \"green,blue\" \"yarn start-client\" \"yarn start-server\"",
-		"build": "yarn clean && yarn build-client && yarn build-server"
+		"build": "yarn lint && yarn clean && yarn build-server && mv modules/server/build dist && yarn build-client && mv modules/client/build dist/public",
+		"migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.14",
+		"@types/node": "^12.0.8",
+		"@typescript-eslint/eslint-plugin": "^1.10.2",
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^4.3.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"prettier": "^1.18.2",
+		"typescript": "^3.5.0"
 	}
 }

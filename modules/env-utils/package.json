@@ -1,0 +1,7 @@
+{
+  "name": "env-utils",
+  "version": "1.0.0",
+  "private": true,
+  "author": ".Seikatsu",
+  "main": "src/index.ts"
+}
